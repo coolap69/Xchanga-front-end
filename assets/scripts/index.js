@@ -7,8 +7,12 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
+$(() => {
+  $('#signUp').on('submit', event.onSignUp)
+  $('#signIn').on('submit', event.onSignIn)
+  $('#change-password').on('submit', event.onChangePassword)
+  $('#signOut').on('submit', event.onSignOut)
+  // $('#postButton').on('click', event.onCreatePost)
+  // $('#postButton').on('click', event.onGetService)
+  // $('#deleteButton').on('submit', accountEvents.onDeletePost)//
+})
