@@ -1,54 +1,53 @@
 'use strict'
 
 const app = require('../store.js')
-const ux = require('./ux.js')
+const hide = require('./hide.js')
 
-const onCreateSuccess = function () {
-  $('.user-messages').children().hide()
-  $('#create-account-success').show()
-  $('#create-account')[0].reset()
+const onSignUpSuccess = (data) => {
+  hide.signUp()
+  console.log('You successfully created an account')
+  app.user = data.user
 }
 
-const onError = function (response) {
-  $('.user-messages').children().hide()
-  $('#create-account-error').show()
+const onSignUpFailure = function (response) {
+  console.error(response)
 }
 
 const onSignInSuccess = function (data) {
-  ux.signIn()
+  // hide.signIn()
+  // hide.hideGame()
+  console.log('You successfully sign in')
   app.user = data.user
-  $('#signin-account')[0].reset()
 }
 
-const onSignInError = function (response) {
-  $('.user-messages').children().hide()
-  $('#sign-in-error').show()
+const onSignInFailure = function (response) {
+  console.error(response)
 }
 
 const onChangePasswordSuccess = function () {
-  ux.changePasswordSuccess()
-  $('#change-password')[0].reset()
+  console.log('You succesfully change your password')
 }
 
-const onChangePasswordError = function (response) {
-  $('#password-change-error').show()
+const onChangePasswordFailure = function (response) {
+  console.log(response)
 }
 
 const onSignOutSuccess = function () {
+  console.log('You successfully sign out')
   app.user = null
-  ux.signOut()
 }
 
-const onSignOutError = function () {
+const onSignOutFailure = function (response) {
+  console.log(response)
 }
 
 module.exports = {
-  onCreateSuccess,
-  onError,
+  onSignUpSuccess,
+  onSignUpFailure,
   onSignInSuccess,
-  onSignInError,
+  onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordError,
+  onChangePasswordFailure,
   onSignOutSuccess,
-  onSignOutError
+  onSignOutFailure
 }

@@ -43,6 +43,7 @@ const onUpdateAd = function (event) {
     .then(adsUi.onUpdateAdSuccess)
     .catch(adsUi.onUpdateAdFailure)
 }
+
 module.exports = {
   onCreateAd,
   onGetAds,
