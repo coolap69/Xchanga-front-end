@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Xchanga</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body class="container-fluid">
+
+<!-- Sign up forms -->
+      <!-- <div class="container">
+    			<div class="row main">
+    				<div class="panel-heading">
+    	               <div class="panel-title text-center">
+    	               		<h1 class="title">Xchanga</h1>
+    	               	</div>
+    	            </div>
+    				<div class="main-login main-center">
+    					<form id="signUp" class="form-horizontal" method="post" action="#">
+
+                <div class="form-group">
+    							<label for="first_name" class="cols-sm-2 control-label">First Name</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="name" id="first_name"  placeholder="Enter your Name"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="last_name" class="cols-sm-2 control-label">Last Name</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="name" id="lastname"  placeholder="Enter your Name"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+    									<input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="password" class="cols-sm-2 control-label">Password</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+    								</div>
+    							</div>
+    						</div>
+
+    						<div class="form-group">
+    							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="city" class="cols-sm-2 control-label">City</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="text" class="form-control" name="password" id="city"  placeholder="Enter your City"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="zip" class="cols-sm-2 control-label">Zip Code</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="number" class="form-control" name="password" id="zip"  placeholder="Enter your Zip Code"/>
+    								</div>
+    							</div>
+    						</div>
+
+                <div class="form-group">
+    							<label for="phone" class="cols-sm-2 control-label">Phone Number</label>
+    							<div class="cols-sm-10">
+    								<div class="input-group">
+    									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    									<input type="number" class="form-control" name="password" id="phone"  placeholder="Enter your Phone Number"/>
+    								</div>
+    							</div>
+    						</div>
+
+    						<div class="form-group ">
+    							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                </div>
+            </form>
+                <div class="main-login main-center">
+          				<form id="signIn" class="form-horizontal" method="post" action="#">
+
+                      <div class="form-group">
+          							<label for="first_name" class="cols-sm-2 control-label">Email</label>
+          							<div class="cols-sm-10">
+          								<div class="input-group">
+          									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+          									<input type="text" class="form-control" name="name" id="first_name"  placeholder="Enter your Name"/>
+          								</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+          							<label for="last_name" class="cols-sm-2 control-label">Password</label>
+          							<div class="cols-sm-10">
+          								<div class="input-group">
+          									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+          									<input type="text" class="form-control" name="name" id="l"  placeholder="Enter your Email"/>
+          								</div>
+          							</div>
+          						</div>
+
+      						<div class="form-group ">
+      							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Sign In</button>
+                  </div>
+                </div>
+    					</div>
+    				</div>
+    			</div>
+    		</div> -->
+
+        <!-- <div id="container">
+          <div class="container">
+            <div class="row centered-form">
+              <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign Up to Wad <small>It's free!</small></h3>
+                  </div>
+                  <div class="panel-body">
+                    <form id="signUp" role="form">
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="text" name="first_name" id="firstName" class="form-control input-sm" placeholder="First Name">
+                          </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="text" name="last_name" id="lastName" class="form-control input-sm" placeholder="Last Name">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                          </div>
+                        </div>
+                      </div>
+
+                      <input type="submit" value="Register" class="btn btn-info btn-block">
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="container">
+            <div class="container">
+              <div class="row centered-form">
+                <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Sign in to Wad</h3>
+                    </div>
+                    <div class="panel-body">
+                      <form id="signIn" role="form">
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                        </div>
+
+                        <div class="row">
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+                            <div class="form-group">
+                              <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                            </div>
+                          </div>
+                          <div class="col-xs-6 col-sm-6 col-md-6">
+
+                          </div>
+                        </div>
+
+                        <input type="submit" value="Sign in" class="btn btn-info btn-block">
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="hidename">
+
+            <div class="container">
+<form id="signUp">
+        <fieldset>
+          <!-- <legend>Sign up!</legend> -->
+          <input type="text" name="credentials[email]" value="" placeholder="email">
+          <input type="password" name="credentials[password]" value="" placeholder="password">
+          <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation">
+          <input type="text" name="credentials[first_name]" value="" placeholder="first name">
+          <input type="text" name="credentials[last_name]" value="" placeholder="last name">
+          <input type="text" name="credentials[city]" value="" placeholder="city">
+          <input type="number" name="credentials[zip]" value="" placeholder="zip code">
+          <input type="number" name="credentials[phone]" value="" placeholder="phone number">
+
+
+          <input type="submit" name="submit" value="Sign up!">
+        </fieldset>
+      </form>
+      </div>
+
+        <div class="container">
+          <form id="signIn">
+        <fieldset>
+          <!-- <legend>Sign in!</legend> -->
+          <input type="text" name="credentials[email]" value="" placeholder="email">
+          <input type="password" name="credentials[password]" value="" placeholder="password">
+          <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+    </div>
+</div>
+      <div class="container">
+      <form id="changePassword">
+        <fieldset>
+          <!-- <legend>Change Password</legend> -->
+          <input type="password" name="passwords[old]" value="" placeholder="Old Password">
+          <input type="password" name="passwords[new]" value="" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password">
+        </fieldset>
+      </form>
+      </div>
+      <div class="container">
+      <form id="signOut">
+        <fieldset>
+        <!-- <legend>log out</legend> -->
+        <input type="text" name="credentials[log out]" value="" placeholder="Log Out">
+        <input type="submit" name="submit" value="Sign Out">
+      </fieldset>
+    </form>
+  </div>
+
+
+
+  <div>
+  <form id="ad">
+    <fieldset>
+      <div id="create">
+      <h4>Create Ad</h4>
+    </div>
+
+      <input type="text" name="onGetAds" placeholder="Create and Ad">
+
+      <input type="submit" name="submit" value="create ad">
+
+    <div id="get">
+      <input type="text" name="onGetAds" placeholder="Get an Ad">
+      <input type="submit" name="submit" value="get an ad">
+</div>
+
+    <div id="show">
+    <input type="text" name="onShowAd" placeholder="Show an Ad">
+    <input type="submit" name="submit" value="show an ad">
+</div>
+<div id="delete">
+      <input type="text" name="onDeleteAds" placeholder="Delete Ads">
+      <input type="submit" name="submit" value="delete ads">
+</div>
+    <div id="update">
+      <input type="text" name="onUpdateAd" placeholder="Update Ad">
+      <input type="submit" name="submit" value="update an ad">
+      <textarea></textarea>
+    </div>
+      </fieldset>
+    </form>
+  </div>
+
+
+
+      <h1>Xchanga</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.</p>
+    </body>
+</html>
