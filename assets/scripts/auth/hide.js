@@ -1,49 +1,31 @@
 'use strict'
 
 const signIn = function () {
-  $('.account-actions-holder').children().hide()
-  $('.welcome').hide()
-
-  $('.table-page').children().show()
-  $('.sign-out-div').show()
-  $('#reveal-change-password').show()
+  $(() => {
+    console.log('in the beginning')
+    $('.hidename').children().hide()
+    console.log('Log in')
+  })
 }
 
-const signOut = function () {
-  $('.account-actions-holder').children().show()
-  $('.account-forms').children('.start-forms').show()
-  $('.welcome').show()
-
-  $('.table-page').children().hide()
-  $('.user-messages').children().hide()
-  $('#change-password').hide()
-  $('.sign-out-div').hide()
-  $('#table-holder').empty()
+const signUp = function () {
+  $(() => {
+    console.log('in the beginning')
+    $('.hidename').children().hide()
+    console.log('Sucess')
+  })
 }
 
-const showChangePassword = function () {
-  $('.account-actions-holder').children().show()
-  $('.account-forms').children().show()
-
-  $('.table-page').children().hide()
-  $('.user-messages').children().hide()
-  $('.start-forms').hide()
-  $('#reveal-change-password').hide()
-  $('#table-holder').empty()
-}
-
-const changePasswordSuccess = function () {
-  $('.account-actions-holder').children().hide()
-  $('.welcome').hide()
-
-  $('.table-page').children().show()
-  $('.sign-out-div').show()
-  $('#reveal-change-password').show()
+const hideGame = function () {
+  $(() => {
+    console.log('in the beginning')
+    $('.game').children().show()
+    console.log('Success')
+  })
 }
 
 module.exports = {
   signIn,
-  signOut,
-  showChangePassword,
-  changePasswordSuccess
+  signUp,
+  hideGame
 }

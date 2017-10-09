@@ -1,12 +1,12 @@
 'use strict'
 
-const app = require('../store.js')
+const app = require('../app.js')
 const hide = require('./hide.js')
 
 const onSignUpSuccess = (data) => {
   hide.signUp()
   console.log('You successfully created an account')
-  app.user = data.user
+  // app.user = data.user
 }
 
 const onSignUpFailure = function (response) {
@@ -14,7 +14,7 @@ const onSignUpFailure = function (response) {
 }
 
 const onSignInSuccess = function (data) {
-  // hide.signIn()
+  hide.signUp()
   // hide.hideGame()
   console.log('You successfully sign in')
   app.user = data.user

@@ -1,52 +1,45 @@
 'use strict'
 
-const adsApi = require('./api.js')
-const adsUi = require('./ui.js')
+const userApi = require('./api.js')
+const userUi = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
 
-const onCreateAd = function (event) {
+const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  adsApi.createAd(data)
-    .then(adsUi.onCreateAdSuccess)
-    .catch(adsUi.onCreateAdFailure)
+  console.log('passing through event js')
+  console.log(data)
+  userApi.signUp(data)
+    .then(userUi.onSignUpSuccess)
+    .catch(userUi.onSingUpFailure)
 }
 
-const onGetAds = function (event) {
+const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  adsApi.getAds(data)
-    .then(adsUi.onGetAdsSuccess)
-    .catch(adsUi.onGetAdsFailure)
+  userApi.signIn(data)
+    .then(userUi.onSignInSuccess)
+    .catch(userUi.onSignInFailure)
 }
 
-const onShowAd = function (event) {
+const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  adsApi.showAd(data)
-    .then(adsUi.onShowAdSuccess)
-    .catch(adsUi.onShowAdFailure)
+  userApi.changePassword(data)
+    .then(userUi.onChangePasswordSuccess)
+    .catch(userUi.onChangePasswordFailure)
 }
 
-const onDeleteAds = function (event) {
+const onSignOut = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  adsApi.deleteAds(data)
-    .then(adsUi.onDeleteAdsSuccess)
-    .catch(adsUi.onDeleteAdsFailure)
+  userApi.signOut()
+    .then(userUi.onSignOutSuccess)
+    .catch(userUi.onSignOutFailure)
 }
 
-const onUpdateAd = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  adsApi.updateAd(data)
-    .then(adsUi.onUpdateAdSuccess)
-    .catch(adsUi.onUpdateAdFailure)
-}
 module.exports = {
-  onCreateAd,
-  onGetAds,
-  onShowAd,
-  onDeleteAds,
-  onUpdateAd
+  onSignUp,
+  onSignIn,
+  onChangePassword,
+  onSignOut
 }

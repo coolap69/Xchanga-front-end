@@ -1,6 +1,6 @@
 'use strict'
 
-const app = require('../store.js')
+const app = require('../app.js')
 
 const createMessage = function (data) {
   return $.ajax({
